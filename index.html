@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lm | bio</title>
+    <link rel="shortcut icon" href="https://media.discordapp.net/attachments/1474806292689453247/1482484354348486696/image.png?ex=69b71ea5&is=69b5cd25&hm=03ee7d27c1a89a7401538f317b2ea2dac402b9cf1d3d151e1ee1ffb258029094&=&format=png&quality=lossless" type="image/png">
+    
+    <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/1474806292689453247/1482394357045923972/namemc.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Inter', sans-serif;
+            color: white;
+            overflow: hidden;
+
+            background: url('https://i.makeagif.com/media/1-20-2017/Dcv7Ly.gif') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6); 
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.07); 
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-pic {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.3);
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .link-card {
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            gap: 10px; 
+        }
+
+        .link-card i {
+            font-size: 1.2rem; 
+        }
+
+        .link-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.02);
+            border-color: #7289da; 
+        }
+
+        .link-icon {
+            width: 20px;       
+            height: 20px;      
+            object-fit: contain; 
+            vertical-align: middle;
+        }
+
+        #music-status {
+            font-size: 10px;
+            opacity: 0.4;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="https://cdn.discordapp.com/attachments/1474806292689453247/1482506426139152587/laelex.mp3?ex=69b73333&is=69b5e1b3&hm=32a3e25533240408b0b3e42ccfd69286a5cdc26384e9f50d9bbc00c43b08ab54&">
+    </audio>
+
+    <div class="container">
+        <img src="https://i.pinimg.com/736x/b2/e2/23/b2e2234d10a19f2e8591f1bec5dee825.jpg" alt="Pfp" class="profile-pic">
+        <h1>/lm</h1>
+        <p>he/him</p>
+
+        <div class="links">
+            <a href="https://discord.gg/Hk7DhNUE" target="_blank" class="link-card">
+                <i class="fa-brands fa-discord"></i> Discord
+            </a>
+            
+            <a href="https://namemc.com/profile/InfrxtorFOFINHO" target="_blank" class="link-card">
+                <img src="https://media.discordapp.net/attachments/1474806292689453247/1482394357045923972/namemc.png?ex=69b6cad4&is=69b57954&hm=dea400d3c35ac9769e1c73f414e4aef2d63e0aeef6d654170f3fd281247022cb&=&format=webp&quality=lossless" class="link-icon">
+                NameMC
+            </a>
+            
+            <a href="https://steamcommunity.com/profiles/76561199209974348/" target="_blank" class="link-card">
+                <i class="fa-brands fa-steam"></i> Steam
+            </a>
+            
+        </div>
+
+        <div id="music-status">desenvolvido por /lm © 2026.</div>
+    </div>
+
+    <script>
+        document.body.addEventListener('click', function() {
+            const music = document.getElementById('bg-music');
+            music.play();
+            document.getElementById('music-status').innerHTML = "desenvolvido por /lm © 2026.";
+        }, { once: true });
+    </script>
+
+</body>
+</html>
